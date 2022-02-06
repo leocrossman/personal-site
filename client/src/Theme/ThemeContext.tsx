@@ -12,12 +12,12 @@ const getInitialTheme = () => {
   return 'light'; // light theme as the default;
 };
 
-export const ThemeContext = createContext();
+export const ThemeContext = createContext({});
 
-export const ThemeProvider = ({ initialTheme, children }) => {
+export const ThemeProvider = ({ initialTheme, children }: {initialTheme:any, children:any}) => {
   const [theme, setTheme] = useState(getInitialTheme);
 
-  const rawSetTheme = (rawTheme) => {
+  const rawSetTheme = (rawTheme:any) => {
     const root = window.document.documentElement;
     const isDark = rawTheme === 'dark';
 
