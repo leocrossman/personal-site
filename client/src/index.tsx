@@ -5,14 +5,13 @@ import App from './pages/App/App';
 import { store } from './redux/store';
 import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
-
-import { ThemeProvider } from './Theme/ThemeContext';
+import { ThemeProvider, getInitialTheme } from './Theme/ThemeContext';
 import Background from './Theme/Background/Background';
 
 ReactDOM.render(
-<React.StrictMode>
+  <React.StrictMode>
     <Provider store={store}>
-      <ThemeProvider>
+      <ThemeProvider initialTheme={getInitialTheme()}>
         <Background>
           <App />
         </Background>
