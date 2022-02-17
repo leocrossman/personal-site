@@ -1,14 +1,11 @@
 import React from 'react';
+import { useBattery } from 'react-use';
 import './App.scss';
 
 function App() {
   return (
-    <div>
-      <div className='App'>
-        <header className='App-header'>
-          <div>HELLO</div>
-        </header>
-      </div>
+    <div className='App-container'>
+      <div>HELLO</div>
     </div>
   );
 }
