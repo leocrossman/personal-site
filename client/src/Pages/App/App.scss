@@ -14,5 +14,6 @@
 
   @include v.theme() {
     background-color: v.theme-get('bg-color');
+    color: v.theme-get('text-color');
   }
 }
