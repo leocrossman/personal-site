@@ -1,11 +1,15 @@
 import React from 'react';
-import { useBattery } from 'react-use';
 import './App.scss';
-
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from '../Home/Home';
 function App() {
   return (
     <div className='App-container'>
-      <div>HELLO</div>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
