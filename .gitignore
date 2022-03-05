@@ -1,5 +1,6 @@
 **/*.env
 **/node_modules/
+_test.ts
 
 # Logs
 logs
